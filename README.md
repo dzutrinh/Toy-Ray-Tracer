@@ -12,7 +12,7 @@ Windows using MinGW32
 
 > \>mingw32-make
 
-##Test
+## Test
 
 Test scene has the resolution of 1280x720 and sampling count was set at 100. The higher the sampling count, the better the output result, but the time needed to render the scene is also increased. The Ray Tracer was tested under the following configurations: 
 
