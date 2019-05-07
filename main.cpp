@@ -1,5 +1,3 @@
-// RAYTRACER
-// From Ray Tracing in A Weekend, Peter Shirley
 #define _USE_MATH_DEFINES
 #include <fstream>
 #include <iostream>
