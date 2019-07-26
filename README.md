@@ -16,7 +16,8 @@ Windows using MinGW32
 
 Test scene has the resolution of 1280x720 and sampling count was set at 100. The higher the sampling count, the better the output result, but the time needed to render the scene is also increased. The Ray Tracer was tested under the following configurations: 
 
-* macOS High Sierra (Core i5-5257U 2.7Ghz): 738.74 seconds 
-* Windows 10 Pro (Core i5-4200M 2.5Ghz): 1,237.54 seconds
-* Ubuntu 18.04 (Core 2 Duo 2.0Ghz): 1,628.93 seconds
-* Windows Server 2008 (Xeon E3-1230 V2 (3.3Ghz)): 1,160.75 seconds
+* Core i5-5257U @ 2.7Ghz (macOS High Sierra ): 738.74 seconds 
+* Xeon E5-2678 V2 @ 2.5Ghz (Windows 10 Pro Workstation ): 804.043 seconds
+* Xeon E3-1230 V2 @ 3.3Ghz (Windows Server 2008): 1,160.75 seconds
+* Core i5-4200M 2.5Ghz (Windows 10 Pro): 1,237.54 seconds
+* Core 2 Duo @ 2.0Ghz (Ubuntu 18.04): 1,628.93 seconds
