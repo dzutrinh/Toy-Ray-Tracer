@@ -1,6 +1,6 @@
 CXX=g++
 TARGET=raytracer
-CFLAGS=-O3 -fopenmp --std=c++11 -o $(TARGET)
+CFLAGS=-O3 --std=c++11 -o $(TARGET)
 LDFLAGS=-lm -lpthread
 HEADERS=vec3.h \
 		ray.h \
