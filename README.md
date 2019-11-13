@@ -21,3 +21,5 @@ Test scene has the resolution of 1280x720 and sampling count was set at 100. The
 * Xeon E3-1230 V2 @ 3.3Ghz (Windows Server 2008): 1,160.75 seconds
 * Core i5-4200M 2.5Ghz (Windows 10 Pro): 1,237.54 seconds
 * Core 2 Duo @ 2.0Ghz (Ubuntu 18.04): 1,628.93 seconds
+
+![](https://github.com/dzutrinh/Ray-Tracing-In-One-Weekend/blob/master/out.png)
