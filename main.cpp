@@ -82,6 +82,7 @@ int main() {
 
     // rendering
     for (int j = ny-1; j >= 0; j--) {
+        std::cout << ".";
         for (int i = 0; i < nx; i++) {
             vec3 col(0, 0, 0);
             for (int s = 0; s < ns; s++) {
@@ -97,7 +98,6 @@ int main() {
             int ib = int(255.99 * col[2]);
             of << ir << " " << ig << " " << ib << std::endl;
         }
-        std::cout << ".";
     }
     of.close();
 
