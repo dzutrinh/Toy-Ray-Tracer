@@ -73,12 +73,12 @@ int main() {
     vec3 lookat(0, 0, 0);
     float dist_to_focus = 10;
     float aperture = 0.1;
-    camera cam( lookfrom, lookat, vec3(0, 1, 0), 
-                20, float(nx)/float(ny), 
+    camera cam( lookfrom, lookat, vec3(0, 1, 0),
+                20, float(nx)/float(ny),
                 aperture, dist_to_focus);
 
     // generating scene
-    hitable * world = random_scene();    
+    hitable * world = random_scene();
 
     // rendering
     for (int j = ny-1; j >= 0; j--) {
