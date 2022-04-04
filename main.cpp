@@ -82,7 +82,7 @@ int main() {
 
     // rendering
     for (int j = ny-1; j >= 0; j--) {
-        std::cout << ".";
+        std::cout << "." << std::flush;
         for (int i = 0; i < nx; i++) {
             vec3 col(0, 0, 0);
             for (int s = 0; s < ns; s++) {
