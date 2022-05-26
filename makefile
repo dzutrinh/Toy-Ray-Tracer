@@ -17,4 +17,3 @@ all: $(SOURCE) $(HEADERS)
 
 clean:
 	rm -f $(TARGET)
-
