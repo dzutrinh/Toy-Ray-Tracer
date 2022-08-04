@@ -1,7 +1,7 @@
 CXX=g++
 TARGET=raytracer
 CFLAGS=-O3 --std=c++11 -o $(TARGET)
-LDFLAGS=-lm -lpthread
+LDFLAGS=-lm 
 HEADERS=vec3.h \
 		ray.h \
 		sphere.h \
@@ -13,7 +13,7 @@ HEADERS=vec3.h \
 SOURCE=main.cpp
 
 all: $(SOURCE) $(HEADERS)
-	$(CXX) $(CFLAGS) $(SOURCE) $(LDFLAGS)
+	$(CXX) $(CFLAGS) $(SOURCE) $(LDFLAGS) 
 
 clean:
 	rm -f $(TARGET)
