@@ -1,7 +1,6 @@
 # TOY RAY TRACER
 
-Based on the book "*Ray Tracing in One Weekend*" by *Peter Shirley*. Modified to work under macOS, Linux and Windows.
-[_Ray Tracing in One Weekend_](https://raytracing.github.io/books/RayTracingInOneWeekend.html)
+Based on the book [_Ray Tracing in One Weekend_](https://raytracing.github.io/books/RayTracingInOneWeekend.html) by *Peter Shirley*. Modified to work under macOS, Linux and Windows.
 
 ## Changes
 * Replaced the built-in RNG (rand()) with xorshf96 (https://github.com/raylee/xorshf96).
