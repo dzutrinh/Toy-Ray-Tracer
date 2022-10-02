@@ -1,8 +1,6 @@
 CXX       =g++
 TARGET    =raytracer
 TARGET_MP =$(TARGET)_mp
-BIN_SP    =$(TARGET).exe
-BIN_MP    =$(TARGET)_mp.exe
 CFLAGS    =-O3 --std=c++11
 CFLAGS_SP =$(CFLAGS) -o $(BIN_SP)
 CFLAGS_MP =$(CFLAGS) -D=__USE_OPENMP__ -o $(BIN_MP)
@@ -13,6 +11,8 @@ LDFLAGS_MP=$(LDFLAGS_SP) -fopenmp
 PLATFORM  =
 ifeq ($(OS),Windows_NT)
 	LDFLAGS_SP+=-s
+	BIN_SP=$(TARGET).exe
+	BIN_MP=$(TARGET)_mp.exe
 	ifeq ($(PROCESSOR_ARCHITECTURE),AMD64)
 		PLATFORM=win64
 	endif
@@ -20,6 +20,8 @@ ifeq ($(OS),Windows_NT)
 		PLATFORM=win32
 	endif
 else
+	BIN_SP=$(TARGET)
+	BIN_MP=$(TARGET)_mp
 	UNAME_S := $(shell uname -s)
 	ifeq ($(UNAME_S),Linux)
 		PLATFORM=linux

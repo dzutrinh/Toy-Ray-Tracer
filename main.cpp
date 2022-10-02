@@ -123,14 +123,17 @@ int main() {
             col /= float(ns);                   // average out
             col = vec3(sqrt(col[0]), sqrt(col[1]), sqrt(col[2]));
             // set pixel onto the bitmap
-            bmp.plot(i, ny-j-1, ROUND8(col[0]), ROUND8(col[1]), ROUND8(col[2]));
+            int r = ROUND8(col[0]);
+            int g = ROUND8(col[1]);
+            int b = ROUND8(col[2]);
+            bmp.plot(i, ny-j-1, r, g, b);
         }
         // pacifier :)
         current++;
         cout << "\rRendering scene: " << setw(4) << 100.0f * current/total << "%\r" << flush;
     }
     cout << endl;
-    
+
     // stop timing
     tm.stop();
 
@@ -144,6 +147,6 @@ int main() {
     // display ellapsed time
     double ellapsed = tm.ellapsed();
     cout << "Ellapsed time  : " << setprecision(3) << ellapsed << endl;
-    
+
     return 0;
 }
