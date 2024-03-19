@@ -32,3 +32,4 @@
 *.app
 raytracer
 .DS_Store
+bin/darwin/raytracer_mp
