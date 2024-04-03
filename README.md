@@ -15,7 +15,7 @@ Based on the book [_Ray Tracing in One Weekend_](https://raytracing.github.io/bo
 
 * Windows using MinGW32/64
 
-`>make`
+`>mingw32-make`
 
 The source code has been successfully compiled and tested on the following platforms:
 

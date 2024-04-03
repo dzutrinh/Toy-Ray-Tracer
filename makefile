@@ -19,6 +19,9 @@ ifeq ($(OS),Windows_NT)
 	ifeq ($(PROCESSOR_ARCHITECTURE),x86)
 		PLATFORM=win32
 	endif
+	MD=mkdir
+	MV=move
+	RM=del
 else
 	BIN_SP=$(TARGET)
 	BIN_MP=$(TARGET)_mp
@@ -30,6 +33,9 @@ else
 		PLATFORM=darwin
 		LDFLAGS_MP=$(LDFLAGS_SP) -Xpreprocessor -fopenmp -lomp
 	endif
+	MD=mkdir
+	MV=mv
+	RM=rm
 endif
 OUTPUT    =bin/$(PLATFORM)
 INCLUDE   =include
@@ -54,20 +60,17 @@ all: $(SOURCE) $(HEADERS)
 	@echo - Link flags SP.... = $(LDFLAGS_SP)
 	@echo - Link flags MP.... = $(LDFLAGS_MP)
 	@echo ---------------------
-
-	@mkdir -p $(OUTPUT)
+	@$(MD) "$(OUTPUT)"
 
 	@echo Building single-threaded app: $(BIN_SP)
 	@$(CXX) $(CFLAGS_SP) $(SOURCE) $(LDFLAGS_SP)
-
 	@echo Building multi-threaded app : $(BIN_MP)
 	@$(CXX) $(CFLAGS_MP) $(SOURCE) $(LDFLAGS_MP)
-
 	@echo Relocating binaries...
-	@mv ./$(BIN_SP) $(OUTPUT)
-	@mv ./$(BIN_MP) $(OUTPUT)
+	@$(MV) "./$(BIN_SP)" "$(OUTPUT)"
+	@$(MV) "./$(BIN_MP)" "$(OUTPUT)"
 
 clean:
 	@echo Cleaning previous binaries...
-	@rm -f $(OUTPUT)/$(BIN_SP)
-	@rm -f $(OUTPUT)/$(BIN_MP)
+	@$(RM) -f "$(OUTPUT)/$(BIN_SP)"
+	@$(RM) -f "$(OUTPUT)/$(BIN_MP)"
