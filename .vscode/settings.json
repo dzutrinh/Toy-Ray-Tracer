@@ -1,5 +1,12 @@
 {
     "files.associations": {
         "ostream": "cpp"
-    }
+    },
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "/Users/dzutrinh/Developer/Ray-Tracing-In-One-Weekend",
+            "binaryPath": "/Users/dzutrinh/Developer/Ray-Tracing-In-One-Weekend/raytracer_mp",
+            "binaryArgs": []
+        }
+    ]
 }
